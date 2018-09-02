@@ -18,14 +18,20 @@ public class User {
     private String username;
 
     @Column(name = "password")
-    @JsonIgnore
+//    @JsonIgnore
     private String password;
+
+    @Column(name = "email")
+    private String email;
 
     @Column(name = "first_name")
     private String firstName;
 
     @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "active")
+    private Boolean active;
 
     /**
      * Roles are being eagerly loaded here because
@@ -38,6 +44,22 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id",
                     referencedColumnName = "id"))
     private List<Role> roles;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
 
     public Long getId() {
         return id;
@@ -85,6 +107,20 @@ public class User {
 
     public void setRoles(List<Role> roles) {
         this.roles = roles;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", active=" + active +
+                ", roles=" + roles +
+                '}';
     }
 }
 

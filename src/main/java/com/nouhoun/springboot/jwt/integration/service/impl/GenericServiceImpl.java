@@ -27,6 +27,11 @@ public class GenericServiceImpl implements GenericService {
     }
 
     @Override
+    public User save(User user) {
+        return userRepository.save(user);
+    }
+
+    @Override
     public List<User> findAllUsers() {
         return (List<User>)userRepository.findAll();
     }
