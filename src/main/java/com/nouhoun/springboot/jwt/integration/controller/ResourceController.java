@@ -29,9 +29,18 @@ public class ResourceController {
 
 
     //ME
-//    @PreAuthorize("hasAuthority('ADMIN_USER')")
+//   @PreAuthorize("hasAuthority('ADMIN_USER')")
     @PostMapping("/users/add")
     public User addUser( @RequestBody User user){
+        System.out.println("**************");
+        System.out.println(user.toString());
+        System.out.println("**************");
+        return userService.save(user);
+    }
+
+    //ME
+    @PostMapping("/products/test")
+    public User productTest( @RequestBody User user){
         System.out.println("**************");
         System.out.println(user.toString());
         System.out.println("**************");
