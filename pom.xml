@@ -141,6 +141,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!--Lucia's Deps-->
+
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-configuration-processor</artifactId>-->
+			<!--<optional>true</optional>-->
+		<!--</dependency>-->
 
 
 	</dependencies>
