@@ -11,7 +11,7 @@ import com.nouhoun.springboot.jwt.integration.extensionrepository.exceptions.Inv
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/springjwt/products")
 public class ProductsController {
     private ProductService productService;
 

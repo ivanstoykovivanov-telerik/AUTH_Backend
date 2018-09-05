@@ -3,7 +3,7 @@ package com.nouhoun.springboot.jwt.integration.extensionrepository.areas.admin.s
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.admin.services.base.AdminService;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.models.Product;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.services.base.ProductService;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User;
+import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User2;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.services.base.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +25,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public void changeUserStatus(String status, long id) {
-        User user = userService.findById(id);
+        User2 user = userService.findById(id);
         user.setUserStatus(status);
     }
 

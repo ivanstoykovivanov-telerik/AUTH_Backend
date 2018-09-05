@@ -8,7 +8,7 @@ import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/springjwt/products")
 public class SortProductsController {
     private SortProductsService sortProductsService;
 

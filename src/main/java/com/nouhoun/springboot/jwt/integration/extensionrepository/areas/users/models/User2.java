@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class User2 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -37,7 +37,7 @@ public class User {
     @JsonBackReference
     private List<Product> products;
 
-    public User() {
+    public User2() {
         products = new ArrayList<>();
     }
 

@@ -1,19 +1,19 @@
 package com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.services.base;
 
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.models.Product;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User;
+import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User2;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.UserDTO;
 
 import java.util.List;
 
 public interface UserService {
-    List<User> listAllUsers();
+    List<User2> listAllUsers();
 
-    User findById(long id);
+    User2 findById(long id);
 
-    User addUser(UserDTO user);
+    User2 addUser(UserDTO user);
 
-    User updateUser(long id, User updateUser);
+    User2 updateUser(long id, User2 updateUser);
 
     void deleteUser(long id);
 

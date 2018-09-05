@@ -1,6 +1,6 @@
 package com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.models;
 
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User;
+import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User2;
 
 import javax.persistence.*;
 
@@ -27,7 +27,7 @@ public class File {
     private String downloadLink;
 
     @OneToOne
-    private User owner;
+    private User2 owner;
 
     public File() {
     }
@@ -88,11 +88,11 @@ public class File {
         this.downloadLink = downloadLink;
     }
 
-    public User getOwner() {
+    public User2 getOwner() {
         return owner;
     }
 
-    public void setOwner(User owner) {
+    public void setOwner(User2 owner) {
         this.owner = owner;
     }
 }

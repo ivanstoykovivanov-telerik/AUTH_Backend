@@ -1,30 +1,23 @@
 package com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.services;
 
+import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.config.StorageProperties;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.data.FileRepository;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.exeptions.StorageException;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.exeptions.StorageFileNotFoundException;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.models.File;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.services.base.StorageService;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.data.ProductsRepository;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.exeptions.ProductNotFoundExeption;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.models.Product;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.services.base.UserService;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.constants.Constants;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
@@ -82,7 +75,7 @@ public class StorageServiceImpl implements StorageService {
                     "Cannot store file with relative path outside current directory.");
         }
 
-        User user = userService.findById(userId);
+        User2 user = userService.findById(userId);
 
 //        Path path = Paths.get(rootLocation + "\\" + user.getUsername());
 
@@ -127,7 +120,7 @@ public class StorageServiceImpl implements StorageService {
         }
     }
 
-    private File createFile(MultipartFile multipartFile, Path path, User user, String type) {
+    private File createFile(MultipartFile multipartFile, Path path, User2 user, String type) {
         String filename = multipartFile.getOriginalFilename();
         String name = filename.substring(0, filename.lastIndexOf('.'));
 

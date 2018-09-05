@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@RequestMapping("/springjwt")
 public class FilesController {
     private StorageService storageService;
 

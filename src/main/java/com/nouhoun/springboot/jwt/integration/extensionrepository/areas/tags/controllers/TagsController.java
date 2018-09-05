@@ -11,7 +11,7 @@ import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.tags.ser
 import java.util.List;
 
 @RestController
-@RequestMapping("/tags")
+@RequestMapping("/springjwt/tags")
 public class TagsController  {
     private TagsService tagsService;
 

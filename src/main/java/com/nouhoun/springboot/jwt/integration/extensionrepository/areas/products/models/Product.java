@@ -2,7 +2,7 @@ package com.nouhoun.springboot.jwt.integration.extensionrepository.areas.product
 
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.models.File;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.tags.models.Tag;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User;
+import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User2;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class Product {
     private Date uploadDate;
 
     @ManyToOne
-    private User owner;
+    private User2 owner;
 
     @Column(columnDefinition = "INT DEFAULT 0")
     private long numberOfDownloads;
@@ -104,11 +104,11 @@ public class Product {
         this.uploadDate = uploadDate;
     }
 
-    public User getOwner() {
+    public User2 getOwner() {
         return owner;
     }
 
-    public void setOwner(User owner) {
+    public void setOwner(User2 owner) {
         this.owner = owner;
     }
 

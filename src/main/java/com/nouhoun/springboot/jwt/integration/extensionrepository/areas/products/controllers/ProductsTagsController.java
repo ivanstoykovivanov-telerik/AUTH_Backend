@@ -12,7 +12,7 @@ import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.tags.ser
 import java.util.List;
 
 @RestController
-@RequestMapping("/products/tags")
+@RequestMapping("/springjwt/products/tags")
 public class ProductsTagsController {
     private ProductService productService;
     private TagsService tagsService;

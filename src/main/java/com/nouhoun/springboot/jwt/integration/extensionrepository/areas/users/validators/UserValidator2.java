@@ -1,18 +1,18 @@
 package com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.validators;
 
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User;
+import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User2;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.exceptions.FormatExeption;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class UserValidator {
+public class UserValidator2 {
     //private static final String PASSWORD_PATTERN = "";
     private static final String USERNAME_PATTERN = "^[A-Z0-9a-z_][A-Za-z0-9_.-]+$";
     private static final String EMAIL_PATTERN = "^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
     private static final String NAME_PATTERN = "^[A-Z][a-z]+$";
 
-    public void checkUserDataFormat(User user) {
+    public void checkUserDataFormat(User2 user) {
 //        checkUsernameAndPassword(user.getUsername(), user.getPassword());
         checkEmail(user.getEmail());
         checkName(user.getFirstName());

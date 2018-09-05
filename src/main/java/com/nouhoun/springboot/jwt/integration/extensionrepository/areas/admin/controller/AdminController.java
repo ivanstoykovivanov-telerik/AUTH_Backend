@@ -8,7 +8,7 @@ import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.services.base.ProductService;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/springjwt/admin")
 public class AdminController {
     private AdminService adminService;
     private ProductService productService;

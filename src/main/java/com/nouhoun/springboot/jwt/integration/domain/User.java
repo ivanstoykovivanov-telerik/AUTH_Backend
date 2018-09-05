@@ -111,7 +111,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "User2{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +

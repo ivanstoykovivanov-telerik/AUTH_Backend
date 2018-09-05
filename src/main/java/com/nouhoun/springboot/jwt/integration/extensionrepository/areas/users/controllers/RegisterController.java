@@ -1,13 +1,13 @@
 package com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.controllers;
 
+import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.UserDTO;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.services.base.UserService;
 
 @RestController
-@RequestMapping("/register")
+@RequestMapping("/springjwt/register")
 public class RegisterController {
     private UserService userService;
 
@@ -18,7 +18,7 @@ public class RegisterController {
 
     @PostMapping
     @ResponseBody
-    public User registerUser(@RequestBody UserDTO user) {
+    public User2 registerUser(@RequestBody UserDTO user) {
         return userService.addUser(user);
     }
 }

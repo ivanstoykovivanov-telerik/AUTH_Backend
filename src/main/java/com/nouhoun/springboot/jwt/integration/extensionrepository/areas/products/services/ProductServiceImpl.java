@@ -1,5 +1,6 @@
 package com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.services;
 
+import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.enums.StorageType;
@@ -7,11 +8,9 @@ import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.mo
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.files.services.base.StorageService;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.github.services.base.GithubService;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.data.ProductsRepository;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.exeptions.ProductNotFoundExeption;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.models.Product;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.models.dto.ProductDTO;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products.services.base.ProductService;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.services.base.UserService;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.exceptions.FormatExeption;
 import com.nouhoun.springboot.jwt.integration.extensionrepository.exceptions.InvalidArgumentExeption;
@@ -102,7 +101,7 @@ public class ProductServiceImpl implements ProductService {
         product.setDescription(productDTO.getDescription());
         product.setVersion(productDTO.getVersion());
 
-        User user = userService.findById(productDTO.getOwnerId());
+        User2 user = userService.findById(productDTO.getOwnerId());
         product.setOwner(user);
 
         product.setSourceRepositoryLink(productDTO.getSourceRepositoryLink());

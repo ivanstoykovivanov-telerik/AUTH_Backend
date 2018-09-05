@@ -2,8 +2,8 @@ package com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.d
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User;
+import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.users.models.User2;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository2 extends JpaRepository<User2, Long> {
 }
