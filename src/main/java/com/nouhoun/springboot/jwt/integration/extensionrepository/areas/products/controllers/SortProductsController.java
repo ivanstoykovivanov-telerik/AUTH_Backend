@@ -8,7 +8,7 @@ import com.nouhoun.springboot.jwt.integration.extensionrepository.areas.products
 import java.util.List;
 
 @RestController
-@RequestMapping("/springjwt/products")
+@RequestMapping("/products")
 public class SortProductsController {
     private SortProductsService sortProductsService;
 
@@ -20,6 +20,10 @@ public class SortProductsController {
     @GetMapping
     public @ResponseBody
     List<Product> sortProductsByParam(@RequestParam String sortBy) {
+
+        System.out.println("**************IN******************* ");
+        System.out.println(sortBy);
+
         switch (sortBy) {
             case "Name":
                 return sortProductsService.findAllSortedByName();
